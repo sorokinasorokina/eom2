@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="eom_tests.TestDifferentTZ" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-02T15:40:04" hostname="LAPTOP-G1KOC8KC" time="56.351">
+<testsuite name="eom_tests.TestDifferentTZ" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-06T11:51:37" hostname="LAPTOP-G1KOC8KC" time="49.84">
   <properties/>
-  <testcase name="myMnozhestvennijViborTest" classname="eom_tests.TestDifferentTZ" time="56.351"/>
+  <testcase name="myMnozhestvennijVvodTest" classname="eom_tests.TestDifferentTZ" time="49.84"/>
   <system-out><![CDATA[HTTP/1.1 200 OK
 Server: nginx
-Date: Tue, 02 May 2023 15:40:33 GMT
+Date: Tue, 06 Jun 2023 11:52:04 GMT
 Content-Type: application/json;charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
-Set-Cookie: udacl=mesh; Path=/; Expires=Wed, 03-May-2023 15:40:33 GMT; Max-Age=86400; Secure
+Set-Cookie: udacl=mesh; Path=/; Expires=Wed, 07-Jun-2023 11:52:04 GMT; Max-Age=86400; Secure
 Expires: Thu, 01 Jan 1970 00:00:00 GMT
 Set-Cookie: acl=mod-acl-real; Secure
-Set-Cookie: session-cookie=175b5dcfef0f40ee2cb7175118991a2495aedd11767928a20217e14a0fa591b76232fcb63252ef7789954865f1074b00; Max-Age=86400; Path=/; Secure
+Set-Cookie: session-cookie=17660fa80533190f2cb7175118991a24a10a41c96db7fcf0436386c1dc99207b63a708f6e27b81c47f759029090df833; Max-Age=86400; Path=/; Secure
 
 {
     "id": 3678146,
-    "snils": "1",
     "profiles": [
         {
             "id": 35435001,
@@ -90,6 +89,54 @@ Set-Cookie: session-cookie=175b5dcfef0f40ee2cb7175118991a2495aedd11767928a20217e
             ]
         },
         {
+            "id": 4296770,
+            "type": "teacher",
+            "roles": [
+                "teacher",
+                "staff",
+                "school_admin",
+                "junior_educator",
+                "ae_educator",
+                "deputy"
+            ],
+            "rgn": 77,
+            "user_id": 3678146,
+            "agree_pers_data": false,
+            "agreement_accepted": true,
+            "school_id": 699,
+            "school_shortname": "ГБОУ Школа № 1450 \"Олимп\"",
+            "subject_ids": [
+                137232,
+                33673151,
+                33673395,
+                33623656,
+                33623608,
+                33623596,
+                33673156,
+                33623615,
+                33623650,
+                33623665,
+                33673202,
+                147897,
+                33623638,
+                33673185,
+                33673340,
+                33623594,
+                33623568,
+                33623649,
+                33623648,
+                33623645,
+                33623580,
+                33623636,
+                33623623,
+                33623646,
+                33623617,
+                33623605,
+                33623584,
+                33623661
+            ]
+        },
+        {
             "id": 35435464,
             "type": "support",
             "roles": [
@@ -144,71 +191,20 @@ Set-Cookie: session-cookie=175b5dcfef0f40ee2cb7175118991a2495aedd11767928a20217e
             "subject_ids": [
                 
             ]
-        },
-        {
-            "id": 4296770,
-            "type": "teacher",
-            "roles": [
-                "ae_educator",
-                "educator",
-                "teacher",
-                "staff",
-                "deputy",
-                "school_admin"
-            ],
-            "rgn": 77,
-            "user_id": 3678146,
-            "agree_pers_data": false,
-            "agreement_accepted": true,
-            "school_id": 699,
-            "school_shortname": "ГБОУ Школа № 1450 \"Олимп\"",
-            "subject_ids": [
-                137232,
-                33673151,
-                33673395,
-                33623656,
-                33623646,
-                33623605,
-                33623608,
-                33623596,
-                33673156,
-                33623615,
-                33623650,
-                33623665,
-                33673202,
-                33623661,
-                33623623,
-                33623617,
-                147897,
-                33623638,
-                33623584,
-                33673185,
-                33673340,
-                33623594,
-                33623568,
-                33623649,
-                33623636,
-                33623648,
-                33623645,
-                33623580
-            ]
         }
     ],
     "first_name": "А",
     "last_name": "М",
     "middle_name": "В",
-    "authentication_token": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMzc1MDE3IiwibmJmIjoxNjgzMDQxOTkwLCJtc2giOiIwOTJhM2M0Yi0zM2I2LTQ0NjUtODBiMC1iNTM0MzNiYTliY2UiLCJhdGgiOiJzdWRpciIsInN0ZiI6IjMzMjgxOTU0IiwiaXNzIjoiaHR0cHM6XC9cL3NjaG9vbC10ZXN0Lm1vcy5ydSIsInJscyI6InsxNjpbMTk2OjE6W11dfSx7MTc6WzE5NzoxOltdXX0sezE4OlsxOTg6MTpbXV19LHszOls1NDo5Ols5MjM5XSwxOjM6W10sNTA6OTpbOTIzOV0sMjAyOjE3OltdLDE4MToxNjpbXSw0MzoxOltdLDM6MzpbOTIzOV0sMzU6NDpbOTIzOV0sNTozOltdLDU4Ojk6WzkyMzldLDU3Ojk6W11dfSx7NDpbMTYwOjExOls5MjM5XV19LHsxMDpbMTkwOjE6W11dfSx7MTE6WzE5MToxOltdXX0sezEyOlsxOTI6MTpbXV19LHsxMzpbMTkzOjE6W11dfSx7MTQ6WzE5NDoxOltdXX0sezE1OlsxOTU6MTpbXV19IiwiZXhwIjoxNjgzOTA1OTkwLCJpYXQiOjE2ODMwNDE5OTAsImp0aSI6ImQwZmE0MjM5LTViYjctNDJiMS1iYTQyLTM5NWJiNzkyYjE3YiIsInNzbyI6IjE2OWVlOTc3LTA2NjUtNDc3Ny05NjBkLTIyZTUxYTViMGVlYiJ9.SEMU3Flbp4ZWTT9qUsE-oN_9VlaRVcrlUEgJdlmTPINIjtQj5BI5hOrc2RZbw26qx39KRy06ydplexs2gNn_57rhxNuAmtM3fQEDECj0gVGxxWiErdDKYC-gK1shEQaaVykK45UEb9rOSRW0Mqwt8tkWNRebH9Yx-9x8ef2ZQ758GNBIOZ_1-B1h5i3ggqqHLhABVpPtP4XawKO2yWLWfuAAJ97Epa2cUFifIr6urmWnpkM7I0N2SsEwuL5HlNVyqjNxngqMJqQ1i2-0VpLZcLjdWOHKTGbROweZ1nwj3DSM-Im4G1aNeQWgIBMLQBFvmJ62EVOCeEAxFLcFJp7JcA",
+    "phone_number": "",
+    "authentication_token": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMzc1MDE3IiwibmJmIjoxNjg2MDUyMzEwLCJtc2giOiIwOTJhM2M0Yi0zM2I2LTQ0NjUtODBiMC1iNTM0MzNiYTliY2UiLCJhdGgiOiJzdWRpciIsInN0ZiI6IjMzMjgxOTU0IiwiaXNzIjoiaHR0cHM6XC9cL3NjaG9vbC10ZXN0Lm1vcy5ydSIsInJscyI6InsxNjpbMTk2OjE6W11dfSx7MTc6WzE5NzoxOltdXX0sezE4OlsxOTg6MTpbXV19LHszOls1NDo5Ols5MjM5XSwxOjM6W10sNTA6OTpbOTIzOV0sMjAyOjE3OltdLDE4MToxNjpbXSw0MzoxOltdLDM6MzpbOTIzOV0sMzU6NDpbOTIzOV0sNTozOltdLDU4Ojk6WzkyMzldLDU3Ojk6W11dfSx7NDpbMTYwOjExOls5MjM5XV19LHsxMDpbMTkwOjE6W11dfSx7MTE6WzE5MToxOltdXX0sezEyOlsxOTI6MTpbXV19LHsxMzpbMTkzOjE6W11dfSx7MTQ6WzE5NDoxOltdXX0sezE1OlsxOTU6MTpbXV19IiwiZXhwIjoxNjg2OTE2MzEwLCJpYXQiOjE2ODYwNTIzMTAsImp0aSI6IjI0MzA1NWI0LWMwNjMtNDAxMi1iMDU1LWI0YzA2M2QwMTIyYSIsInNzbyI6IjE2OWVlOTc3LTA2NjUtNDc3Ny05NjBkLTIyZTUxYTViMGVlYiJ9.cRwd4RAx8hMz68IujN5JQ32vWW2HOyV0PR17L7uxbNJ3lfl_I_kdthYQtAhDDsCg3_-tJd9vQ27bo775RbTlAoXFm-jy4lBIMMwzLuijGSvq2QkJxhA9kwa_iIrv2XD15j4bEzLCODLq_iTSeW6wPb6dULbufg9IlqTAh5Z0QYZErPDMfdvlvNmPEvkIOZZS2KJvG6mMX6Kfo2uskzbzbWFrbgIUcxQRS8FqJ_dZlvpcxADB9r_iqPoSJbRweomOxnnjQAeB5I_itq8O1daVcCRktlFf2M8ZGvXR9MvgjyGAdRWvj_hYvOpY0tse5YEC7L5pQRF7XKILZEds5X1KxA",
     "password_change_required": false,
     "regional_auth": "msk",
     "staff_id": 33281954,
-    "date_of_birth": "1997-10-08"
+    "date_of_birth": "2027-10-11"
 }
-!!!!мой Authentication_token = 
-eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMzc1MDE3IiwibmJmIjoxNjgzMDQxOTkwLCJtc2giOiIwOTJhM2M0Yi0zM2I2LTQ0NjUtODBiMC1iNTM0MzNiYTliY2UiLCJhdGgiOiJzdWRpciIsInN0ZiI6IjMzMjgxOTU0IiwiaXNzIjoiaHR0cHM6XC9cL3NjaG9vbC10ZXN0Lm1vcy5ydSIsInJscyI6InsxNjpbMTk2OjE6W11dfSx7MTc6WzE5NzoxOltdXX0sezE4OlsxOTg6MTpbXV19LHszOls1NDo5Ols5MjM5XSwxOjM6W10sNTA6OTpbOTIzOV0sMjAyOjE3OltdLDE4MToxNjpbXSw0MzoxOltdLDM6MzpbOTIzOV0sMzU6NDpbOTIzOV0sNTozOltdLDU4Ojk6WzkyMzldLDU3Ojk6W11dfSx7NDpbMTYwOjExOls5MjM5XV19LHsxMDpbMTkwOjE6W11dfSx7MTE6WzE5MToxOltdXX0sezEyOlsxOTI6MTpbXV19LHsxMzpbMTkzOjE6W11dfSx7MTQ6WzE5NDoxOltdXX0sezE1OlsxOTU6MTpbXV19IiwiZXhwIjoxNjgzOTA1OTkwLCJpYXQiOjE2ODMwNDE5OTAsImp0aSI6ImQwZmE0MjM5LTViYjctNDJiMS1iYTQyLTM5NWJiNzkyYjE3YiIsInNzbyI6IjE2OWVlOTc3LTA2NjUtNDc3Ny05NjBkLTIyZTUxYTViMGVlYiJ9.SEMU3Flbp4ZWTT9qUsE-oN_9VlaRVcrlUEgJdlmTPINIjtQj5BI5hOrc2RZbw26qx39KRy06ydplexs2gNn_57rhxNuAmtM3fQEDECj0gVGxxWiErdDKYC-gK1shEQaaVykK45UEb9rOSRW0Mqwt8tkWNRebH9Yx-9x8ef2ZQ758GNBIOZ_1-B1h5i3ggqqHLhABVpPtP4XawKO2yWLWfuAAJ97Epa2cUFifIr6urmWnpkM7I0N2SsEwuL5HlNVyqjNxngqMJqQ1i2-0VpLZcLjdWOHKTGbROweZ1nwj3DSM-Im4G1aNeQWgIBMLQBFvmJ62EVOCeEAxFLcFJp7JcA
-35435001
-material_moderator
 Request method:	DELETE
-Request URI:	https://uchebnik-test.mos.ru/cms/api/atomic_objects/10541049
+Request URI:	https://uchebnik-test.mos.ru/cms/api/atomic_objects/10568775
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -218,20 +214,20 @@ Headers:		accept=application/vnd.cms-v4+json
 				Content-Type=application/json
 Cookies:		profile_type=teacher
 				profile_id=4296770
-				auth_token=eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMzc1MDE3IiwibmJmIjoxNjgzMDQxOTkwLCJtc2giOiIwOTJhM2M0Yi0zM2I2LTQ0NjUtODBiMC1iNTM0MzNiYTliY2UiLCJhdGgiOiJzdWRpciIsInN0ZiI6IjMzMjgxOTU0IiwiaXNzIjoiaHR0cHM6XC9cL3NjaG9vbC10ZXN0Lm1vcy5ydSIsInJscyI6InsxNjpbMTk2OjE6W11dfSx7MTc6WzE5NzoxOltdXX0sezE4OlsxOTg6MTpbXV19LHszOls1NDo5Ols5MjM5XSwxOjM6W10sNTA6OTpbOTIzOV0sMjAyOjE3OltdLDE4MToxNjpbXSw0MzoxOltdLDM6MzpbOTIzOV0sMzU6NDpbOTIzOV0sNTozOltdLDU4Ojk6WzkyMzldLDU3Ojk6W11dfSx7NDpbMTYwOjExOls5MjM5XV19LHsxMDpbMTkwOjE6W11dfSx7MTE6WzE5MToxOltdXX0sezEyOlsxOTI6MTpbXV19LHsxMzpbMTkzOjE6W11dfSx7MTQ6WzE5NDoxOltdXX0sezE1OlsxOTU6MTpbXV19IiwiZXhwIjoxNjgzOTA1OTkwLCJpYXQiOjE2ODMwNDE5OTAsImp0aSI6ImQwZmE0MjM5LTViYjctNDJiMS1iYTQyLTM5NWJiNzkyYjE3YiIsInNzbyI6IjE2OWVlOTc3LTA2NjUtNDc3Ny05NjBkLTIyZTUxYTViMGVlYiJ9.SEMU3Flbp4ZWTT9qUsE-oN_9VlaRVcrlUEgJdlmTPINIjtQj5BI5hOrc2RZbw26qx39KRy06ydplexs2gNn_57rhxNuAmtM3fQEDECj0gVGxxWiErdDKYC-gK1shEQaaVykK45UEb9rOSRW0Mqwt8tkWNRebH9Yx-9x8ef2ZQ758GNBIOZ_1-B1h5i3ggqqHLhABVpPtP4XawKO2yWLWfuAAJ97Epa2cUFifIr6urmWnpkM7I0N2SsEwuL5HlNVyqjNxngqMJqQ1i2-0VpLZcLjdWOHKTGbROweZ1nwj3DSM-Im4G1aNeQWgIBMLQBFvmJ62EVOCeEAxFLcFJp7JcA
+				auth_token=eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMzc1MDE3IiwibmJmIjoxNjg2MDUyMzEwLCJtc2giOiIwOTJhM2M0Yi0zM2I2LTQ0NjUtODBiMC1iNTM0MzNiYTliY2UiLCJhdGgiOiJzdWRpciIsInN0ZiI6IjMzMjgxOTU0IiwiaXNzIjoiaHR0cHM6XC9cL3NjaG9vbC10ZXN0Lm1vcy5ydSIsInJscyI6InsxNjpbMTk2OjE6W11dfSx7MTc6WzE5NzoxOltdXX0sezE4OlsxOTg6MTpbXV19LHszOls1NDo5Ols5MjM5XSwxOjM6W10sNTA6OTpbOTIzOV0sMjAyOjE3OltdLDE4MToxNjpbXSw0MzoxOltdLDM6MzpbOTIzOV0sMzU6NDpbOTIzOV0sNTozOltdLDU4Ojk6WzkyMzldLDU3Ojk6W11dfSx7NDpbMTYwOjExOls5MjM5XV19LHsxMDpbMTkwOjE6W11dfSx7MTE6WzE5MToxOltdXX0sezEyOlsxOTI6MTpbXV19LHsxMzpbMTkzOjE6W11dfSx7MTQ6WzE5NDoxOltdXX0sezE1OlsxOTU6MTpbXV19IiwiZXhwIjoxNjg2OTE2MzEwLCJpYXQiOjE2ODYwNTIzMTAsImp0aSI6IjI0MzA1NWI0LWMwNjMtNDAxMi1iMDU1LWI0YzA2M2QwMTIyYSIsInNzbyI6IjE2OWVlOTc3LTA2NjUtNDc3Ny05NjBkLTIyZTUxYTViMGVlYiJ9.cRwd4RAx8hMz68IujN5JQ32vWW2HOyV0PR17L7uxbNJ3lfl_I_kdthYQtAhDDsCg3_-tJd9vQ27bo775RbTlAoXFm-jy4lBIMMwzLuijGSvq2QkJxhA9kwa_iIrv2XD15j4bEzLCODLq_iTSeW6wPb6dULbufg9IlqTAh5Z0QYZErPDMfdvlvNmPEvkIOZZS2KJvG6mMX6Kfo2uskzbzbWFrbgIUcxQRS8FqJ_dZlvpcxADB9r_iqPoSJbRweomOxnnjQAeB5I_itq8O1daVcCRktlFf2M8ZGvXR9MvgjyGAdRWvj_hYvOpY0tse5YEC7L5pQRF7XKILZEds5X1KxA
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 204 No Content
 Server: nginx
-Date: Tue, 02 May 2023 15:40:59 GMT
+Date: Tue, 06 Jun 2023 11:52:27 GMT
 Connection: keep-alive
 Access-Control-Request-Method: *
 Access-Control-Allow-Methods: POST, PUT, DELETE, GET, OPTIONS
 Access-Control-Allow-Headers: Content-Type, api_key, Authorization, Cookie, User-Id, Profile-Id, Auth-Token
 Vary: Origin
 Cache-Control: no-cache
-X-Request-Id: e0515bea5afe628b7af3669c8d6b8d38e0515bea5afe628b7af3669c8d6b8d38
-X-Runtime: 0.043964
+X-Request-Id: 955ab2143ad12461171342653df424fc955ab2143ad12461171342653df424fc
+X-Runtime: 0.049711
 Access-Control-Allow-Credentials: true
 Access-Control-Allow-Methods: GET,POST,OPTIONS,PUT,DELETE
 Access-Control-Allow-Headers: Content-Type,Auth-Token,User-Id,Profile-Id,Origin,X-Requested-With,MESH-ID,authorization,mesh-id
@@ -239,31 +235,13 @@ Access-Control-Max-Age: 1728000
 Access-Control-Expose-Headers: DAV,content-length,Allow
 Set-Cookie: aid=10;Path=/;Expires=Fri, 26-Jul-2030 16:27:11 GMT; Secure
 Access-Control-Allow-Headers: Accept, Content-Type, Auth-Token, Profile-Id, X-HTTP-Method-Override, Profile
-Set-Cookie: session-cookie=175b5dd5ffb77e4c2cb7175118991a24c365fbb47587b094c679311a5cc081236e58ff778ba29ba19f1c06adb7465cac; Max-Age=86400; Path=/; Secure
+Set-Cookie: session-cookie=17660fad3acb3ae52cb7175118991a24e15fb774169a6c92c4c616238ccccc10dedcd2d040ba1a06523422ad2977a6e7; Max-Age=86400; Path=/; Secure
 ]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 18301
+  <system-err><![CDATA[Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 25994
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-мая 02, 2023 7:40:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 110
-мая 02, 2023 7:41:00 PM org.openqa.selenium.remote.http.WebSocket$Listener onError
-WARNING: Connection reset
-java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-
+июн. 06, 2023 3:51:44 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 114, so returning the closest version found: 110
 ]]></system-err>
 </testsuite>

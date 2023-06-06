@@ -9,6 +9,8 @@ public class TestDifferentTZ {
     String firstAnswer = "first answer";
     String secondAnswer = "second answer";
     String thirdAnswer = "third answer";
+    String firstAnswerVvod = "answer vvod";
+    String secondAnswerVvod = "second vvod";
 
     @Test
     void myOpenAnswerTest(){
@@ -32,6 +34,32 @@ public class TestDifferentTZ {
                 .saveTZ()
                 .checkUrlAfterSaveTZ();
         int idTZ = tzopen.getIdTz();
+        testTaskApi.deleteTestTask(idTZ);
+    }
+
+    @Test
+    void myOdinochnijVvodTest(){
+        Configuration.timeout=100000;
+        Autorization autorization= new Autorization("15145652956", "pR6vs9eG"); // экземпляр класса (инстанс, объект) авторизации
+        TZodinochnijVvod tzodinochnijVvod = new TZodinochnijVvod();
+        TestTaskApi testTaskApi = new TestTaskApi();
+        PageOpener.openSchoolTestMosRu();
+        autorization.autorizationUserWithRoleTeacher();
+        PageOpener.openUchebnikTestMosRuMain();
+        autorization.selectRoleTeacher();
+        PageOpener.openPageNewTask();
+        tzodinochnijVvod
+                .obrabotkaOknaNachatogoTZ()
+                .writeTaskFieldTZ()
+                .openSpisokTypeTZ();
+        tzodinochnijVvod
+                .clickNaOdinochnijVvod()
+                .writeAnswerInFieldAnswer(firstAnswerVvod)
+                .clickUchitivatRegistrToggle()
+                .fillSettingFieldsTZ()
+                .saveTZ()
+                .checkUrlAfterSaveTZ();
+        int idTZ = tzodinochnijVvod.getIdTz();
         testTaskApi.deleteTestTask(idTZ);
     }
 
@@ -60,6 +88,33 @@ public class TestDifferentTZ {
                 .saveTZ()
                 .checkUrlAfterSaveTZ();
         int idTZ = tzodinochnijVibor.getIdTz();
+        testTaskApi.deleteTestTask(idTZ);
+    }
+
+    @Test
+    void myMnozhestvennijVvodTest(){
+        Configuration.timeout=100000;
+        Autorization autorization= new Autorization("15145652956", "pR6vs9eG"); // экземпляр класса (инстанс, объект) авторизации
+        TZmnozhestvennijVvod tzmnozhestvennijVvod = new TZmnozhestvennijVvod();
+        TestTaskApi testTaskApi = new TestTaskApi();
+        PageOpener.openSchoolTestMosRu();
+        autorization.autorizationUserWithRoleTeacher();
+        PageOpener.openUchebnikTestMosRuMain();
+        autorization.selectRoleTeacher();
+        PageOpener.openPageNewTask();
+        tzmnozhestvennijVvod
+                .obrabotkaOknaNachatogoTZ()
+                .writeTaskFieldTZ()
+                .openSpisokTypeTZ();
+        tzmnozhestvennijVvod
+                .clickNaMnozhestvennijVvod()
+                .writeAnswerInFieldAnswer(firstAnswerVvod)
+                .addVariantOtveta()
+                .writeAnswerInFieldAnswer(secondAnswerVvod)
+                .fillSettingFieldsTZ()
+                .saveTZ()
+                .checkUrlAfterSaveTZ();
+        int idTZ = tzmnozhestvennijVvod.getIdTz();
         testTaskApi.deleteTestTask(idTZ);
     }
 
