@@ -1,21 +1,29 @@
 package eom_tests;
 import com.codeborne.selenide.*;
 import eom_logical.*;
+import org.apache.commons.lang3.exception.ExceptionContext;
 import org.testng.annotations.Test;
+
+import java.io.*;
+import java.util.Properties;
+
 import static eom_logical.PageOpener.*;
 
-
-public class TestDifferentTZ {
+public class TestDifferentTZ implements DesktopDriver{
     String firstAnswer = "first answer";
     String secondAnswer = "second answer";
     String thirdAnswer = "third answer";
+    String firstAnswerVvod = "answer vvod";
+    String secondAnswerVvod = "second vvod";
 
     @Test
-    void myOpenAnswerTest(){
+    void myOpenAnswerTest (){
         Configuration.timeout=100000;
         Autorization autorization= new Autorization("15145652956", "pR6vs9eG"); // экземпляр класса (инстанс, объект) авторизации
         TZopenAnswer tzopen = new TZopenAnswer();  // создание экземпляра класса
         TestTaskApi testTaskApi = new TestTaskApi();
+
+    //    initDriver(); вызов метода Интерфейса, проимпллеменченного
 
         PageOpener.openSchoolTestMosRu();
         autorization.autorizationUserWithRoleTeacher();
@@ -32,6 +40,32 @@ public class TestDifferentTZ {
                 .saveTZ()
                 .checkUrlAfterSaveTZ();
         int idTZ = tzopen.getIdTz();
+        testTaskApi.deleteTestTask(idTZ);
+    }
+
+    @Test
+    void myOdinochnijVvodTest(){
+        Configuration.timeout=100000;
+        Autorization autorization= new Autorization("15145652956", "pR6vs9eG"); // экземпляр класса (инстанс, объект) авторизации
+        TZodinochnijVvod tzodinochnijVvod = new TZodinochnijVvod();
+        TestTaskApi testTaskApi = new TestTaskApi();
+        PageOpener.openSchoolTestMosRu();
+        autorization.autorizationUserWithRoleTeacher();
+        PageOpener.openUchebnikTestMosRuMain();
+        autorization.selectRoleTeacher();
+        PageOpener.openPageNewTask();
+        tzodinochnijVvod
+                .obrabotkaOknaNachatogoTZ()
+                .writeTaskFieldTZ()
+                .openSpisokTypeTZ();
+        tzodinochnijVvod
+                .clickNaOdinochnijVvod()
+                .writeAnswerInFieldAnswer(firstAnswerVvod)
+                .clickUchitivatRegistrToggle()
+                .fillSettingFieldsTZ()
+                .saveTZ()
+                .checkUrlAfterSaveTZ();
+        int idTZ = tzodinochnijVvod.getIdTz();
         testTaskApi.deleteTestTask(idTZ);
     }
 
@@ -60,6 +94,33 @@ public class TestDifferentTZ {
                 .saveTZ()
                 .checkUrlAfterSaveTZ();
         int idTZ = tzodinochnijVibor.getIdTz();
+        testTaskApi.deleteTestTask(idTZ);
+    }
+
+    @Test
+    void myMnozhestvennijVvodTest(){
+        Configuration.timeout=100000;
+        Autorization autorization= new Autorization("15145652956", "pR6vs9eG"); // экземпляр класса (инстанс, объект) авторизации
+        TZmnozhestvennijVvod tzmnozhestvennijVvod = new TZmnozhestvennijVvod();
+        TestTaskApi testTaskApi = new TestTaskApi();
+        PageOpener.openSchoolTestMosRu();
+        autorization.autorizationUserWithRoleTeacher();
+        PageOpener.openUchebnikTestMosRuMain();
+        autorization.selectRoleTeacher();
+        PageOpener.openPageNewTask();
+        tzmnozhestvennijVvod
+                .obrabotkaOknaNachatogoTZ()
+                .writeTaskFieldTZ()
+                .openSpisokTypeTZ();
+        tzmnozhestvennijVvod
+                .clickNaMnozhestvennijVvod()
+                .writeAnswerInFieldAnswer(firstAnswerVvod)
+                .addVariantOtveta()
+                .writeAnswerInFieldAnswer(secondAnswerVvod)
+                .fillSettingFieldsTZ()
+                .saveTZ()
+                .checkUrlAfterSaveTZ();
+        int idTZ = tzmnozhestvennijVvod.getIdTz();
         testTaskApi.deleteTestTask(idTZ);
     }
 
@@ -107,5 +168,20 @@ public class TestDifferentTZ {
                 .checkUrlAfterSaveTZ();
         int idTZ = tzmnozhestvennijVibor.getIdTz();
         testTaskApi.deleteTestTask(idTZ);
+    }
+
+    @Test
+    void trialTestWithFile(){
+        String pole = "C:\\Users\\cosys\\IdeaProjects\\sorokina2\\src\\main\\resources\\env.properties";
+        Properties properties = new Properties();
+        try{
+            InputStream inputStream = new FileInputStream(pole);
+            properties.load(inputStream);
+            System.out.println(properties.getProperty("base_url"));
+        }
+        catch (Exception e){
+            throw new RuntimeException("Ошибочка вышла");
+        }
+        finally {}
     }
 }

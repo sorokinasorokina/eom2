@@ -8,7 +8,7 @@ public class TZmnozhestvennijVibor extends TaskConstructorPage{
     private SelenideElement elAddVariantOtvetaPole = $x("//p[contains(text(),'Добавить вариант ответа...')]");
     private SelenideElement elThirdAnswerCheckBoxBtn = $x("//*[contains(text(),'third answer')]/../../../../../../../../../../..//input[@type='checkbox']");
 
-    public TZmnozhestvennijVibor clickNaMnozhestvennijVibor() { // метод возвращает значение с типом TZopenAnswer
+    public TZmnozhestvennijVibor clickNaMnozhestvennijVibor() { // метод возвращает значение с типом TZmnozhestvennijVibor
         elMnozhestvennijOtvetBtn.click();
         return this;
     }
