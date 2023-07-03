@@ -22,9 +22,4 @@ public class TZmnozhestvennijVvod extends TaskConstructorPage{
         elAddVariantOtvetaPole.click();
         return this;
     }
-
-//    public TZmnozhestvennijVvod clickUchitivatRegistrToggle() {
-//        elRegistrToggle.click();
-//        return this;
-//    }
 }

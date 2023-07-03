@@ -5,7 +5,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class TZopenAnswer extends TaskConstructorPage {
     private SelenideElement elOtkritijOtvetBtn = $x("//*[contains(text(),'Открытый ответ')]");
 
-    public TZopenAnswer clickNaOtkritijOtvet() { // метод возвращает значение с типом TZopenAnswer
+    public TZopenAnswer clickNaOtkritijOtvet() { // метод возвращает значение с типом clickNaOtkritijOtvet
         elOtkritijOtvetBtn.click();
         return this;
     }

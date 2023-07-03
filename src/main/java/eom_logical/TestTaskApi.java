@@ -1,5 +1,4 @@
 package eom_logical;
-
 import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.proxy.ResponseSizeWatchdog;
 import io.restassured.RestAssured;
@@ -11,7 +10,6 @@ import io.restassured.specification.ResponseSpecification;
 import org.asynchttpclient.RequestBuilder;
 import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
-
 import java.util.regex.Matcher;
 
 public class TestTaskApi {
