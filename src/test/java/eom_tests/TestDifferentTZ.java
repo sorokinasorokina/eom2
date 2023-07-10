@@ -69,7 +69,7 @@ public class TestDifferentTZ implements DesktopDriver{
         testTaskApi.deleteTestTask(idTZ);
     }
 
-    @Test
+    @Test(description = "my Odinochnij Vibor Test")
     void myOdinochnijViborTest(){
         Configuration.timeout=100000;
         Autorization autorization= new Autorization("15145652956", "pR6vs9eG"); // экземпляр класса (инстанс, объект) авторизации

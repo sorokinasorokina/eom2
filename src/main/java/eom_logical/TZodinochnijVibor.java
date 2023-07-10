@@ -1,5 +1,7 @@
 package eom_logical;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
+
 import static com.codeborne.selenide.Selenide.*;
 
 public class TZodinochnijVibor extends TaskConstructorPage{
@@ -11,7 +13,7 @@ public class TZodinochnijVibor extends TaskConstructorPage{
         elOdinochnijOtvetBtn.click();
         return this;
     }
-
+    @Step("write Answer In FieldAnswerTZ {answer}")
     public TZodinochnijVibor writeAnswerInFieldAnswerTZ(String answer){
         elFirstAnswerPole.sendKeys(answer);
         return this;

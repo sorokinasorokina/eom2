@@ -3,6 +3,8 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
+import io.qameta.allure.Step;
+
 import static com.codeborne.selenide.Selenide.*;
 
 public class TaskConstructorPage {
@@ -29,6 +31,7 @@ public class TaskConstructorPage {
     private SelenideElement elDlyaRabotiBibl = $x("//*[contains(text(),'Для работы в Библиотеке')]");
     private SelenideElement elViewMaterialBtn = $x("//*[contains(text(),'Посмотреть')]");
 
+    @Step("obrabotka Okna Nachatogo TZ")
     public TaskConstructorPage obrabotkaOknaNachatogoTZ() {
         sleep(5000); //!!!!!!! заменить
         if (elContinueBtnOnModalView.exists()) {
@@ -37,6 +40,7 @@ public class TaskConstructorPage {
         return this; // возвращение экземпляра класса TaskConstructorPage
     }
 
+    @Step("write Task Field TZ")
     public TaskConstructorPage writeTaskFieldTZ() { // метод возвращает значение с типом TZopenAnswer
 //        Date сalendar = new Date();
 //        Long time = сalendar.getTime();
@@ -44,11 +48,13 @@ public class TaskConstructorPage {
         return this;
     }
 
+    @Step("open Spisok Type TZ")
     public TaskConstructorPage openSpisokTypeTZ() { // метод возвращает значение с типом TZopenAnswer
         elOdinochnijViborBtn.click();
         return this;   // возвращает текущий экземпляр этого класса
     }
 
+    @Step("fill Setting Fields TZ")
     public TaskConstructorPage fillSettingFieldsTZ(){
         elSettingBtn.click(); //клик по шестеренке
         //первая вкладка
@@ -67,11 +73,13 @@ public class TaskConstructorPage {
         return this;
     }
 
+    @Step("save TZ")
     public TaskConstructorPage saveTZ(){
         elSaveVMoiMateriali.click();
         return this;
     }
 
+    @Step("get Value Of Task Id Substring")
     public int getValueOfTaskIdSubstring() {
         String actualBaseUrl = "https://uchebnik-test.mos.ru";
         if (actualBaseUrl.equals("https://uchebnik-dev.mos.ru")) { return 57; }
