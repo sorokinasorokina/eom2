@@ -14,13 +14,15 @@ public interface Capabilities {
         switch (browser.trim().toLowerCase()) {
             case "firefox":
             case "ff":
-                Configuration.browser = Browsers.CHROME;
-                Configuration.browserVersion = "79.0";
+                Configuration.browser = Browsers.FIREFOX;
+//              Configuration.browserVersion = "79.0";
                 break;
             case "chrome":
+                Configuration.browser = Browsers.CHROME;
+//              Configuration.browserVersion = "79.0";
             default:
-                Configuration.browser = Browsers.FIREFOX;
-//                Configuration.browserVersion = "107.0";
+                Configuration.browser = Browsers.CHROME;
+//              Configuration.browserVersion = "107.0";
                 break;
         }
 
@@ -33,6 +35,26 @@ public interface Capabilities {
 //        SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(false));
 //        SelenideLogger.addListener("AllureSelenide", new AllureSelenide().enableLogs(LogType.BROWSER, Level.ALL));
 
+
+        options.setCapability("selenoid:options", new HashMap<String, Object>() {{
+            /* How to add test badge */
+            put("name", "Test badge...");
+
+            /* How to set timezone */
+            put("env", new ArrayList<String>() {{
+                add("TZ=UTC");
+            }});
+
+            /* How to add "trash" button */
+            put("labels", new HashMap<String, Object>() {{
+                put("manual", "true");
+            }});
+
+
+        }});
+        RemoteWebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
     }
+
+
 
 }
