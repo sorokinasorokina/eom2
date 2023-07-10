@@ -18,7 +18,7 @@ public class TestDifferentTZ implements DesktopDriver{
 
     @Test
     void myOpenAnswerTest (){
-        Configuration.timeout=100000;
+        //Configuration.timeout=10000;
         Autorization autorization= new Autorization("15145652956", "pR6vs9eG"); // экземпляр класса (инстанс, объект) авторизации
         TZopenAnswer tzopen = new TZopenAnswer();  // создание экземпляра класса
         TestTaskApi testTaskApi = new TestTaskApi();
@@ -45,7 +45,7 @@ public class TestDifferentTZ implements DesktopDriver{
 
     @Test
     void myOdinochnijVvodTest(){
-        Configuration.timeout=100000;
+        //Configuration.timeout=10000;
         Autorization autorization= new Autorization("15145652956", "pR6vs9eG"); // экземпляр класса (инстанс, объект) авторизации
         TZodinochnijVvod tzodinochnijVvod = new TZodinochnijVvod();
         TestTaskApi testTaskApi = new TestTaskApi();
@@ -71,7 +71,7 @@ public class TestDifferentTZ implements DesktopDriver{
 
     @Test(description = "my Odinochnij Vibor Test")
     void myOdinochnijViborTest(){
-        Configuration.timeout=100000;
+        //Configuration.timeout=1000;
         Autorization autorization= new Autorization("15145652956", "pR6vs9eG"); // экземпляр класса (инстанс, объект) авторизации
         TZodinochnijVibor tzodinochnijVibor = new TZodinochnijVibor();
         TestTaskApi testTaskApi = new TestTaskApi();
@@ -99,7 +99,7 @@ public class TestDifferentTZ implements DesktopDriver{
 
     @Test
     void myMnozhestvennijVvodTest(){
-        Configuration.timeout=100000;
+        //Configuration.timeout=10000;
         Autorization autorization= new Autorization("15145652956", "pR6vs9eG"); // экземпляр класса (инстанс, объект) авторизации
         TZmnozhestvennijVvod tzmnozhestvennijVvod = new TZmnozhestvennijVvod();
         TestTaskApi testTaskApi = new TestTaskApi();
@@ -126,7 +126,7 @@ public class TestDifferentTZ implements DesktopDriver{
 
     @Test
     void myMnozhestvennijViborTest(){
-        Configuration.timeout=100000;
+        //Configuration.timeout=10000;
         Autorization autorization= new Autorization("15145652956", "pR6vs9eG"); // экземпляр класса (инстанс, объект) авторизации
         TZmnozhestvennijVibor tzmnozhestvennijVibor = new TZmnozhestvennijVibor();
         TestTaskApi testTaskApi = new TestTaskApi();
