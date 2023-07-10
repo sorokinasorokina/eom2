@@ -36,25 +36,8 @@ public interface Capabilities {
 //        SelenideLogger.addListener("AllureSelenide", new AllureSelenide().enableLogs(LogType.BROWSER, Level.ALL));
 
 
-        options.setCapability("selenoid:options", new HashMap<String, Object>() {{
-            /* How to add test badge */
-            put("name", "Test badge...");
-
-            /* How to set timezone */
-            put("env", new ArrayList<String>() {{
-                add("TZ=UTC");
-            }});
-
-            /* How to add "trash" button */
-            put("labels", new HashMap<String, Object>() {{
-                put("manual", "true");
-            }});
+//
 
 
-        }});
-        RemoteWebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
     }
-
-
-
 }
